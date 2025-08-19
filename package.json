@@ -1,0 +1,19 @@
+{
+  "name": "oauth-gateway",
+  "version": "1.0.0",
+  "description": "Minimal OAuth callback gateway server",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"node server.js\" \"ngrok http --domain=gostealthiq-dev.sa.ngrok.io 3000\"",
+    "dev": "concurrently \"nodemon server.js\" \"ngrok http --domain=gostealthiq-dev.sa.ngrok.io 3000\"",
+    "server-only": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
